@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Factory;
+declare(strict_types=1);
 
+namespace App\Factory;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
@@ -34,7 +35,7 @@ class UserFactory
         return $user;
     }
 
-    public static function setVersion(string $version): void
+    public static function setVersion(int $version): void
     {
         self::$version = $version;
     }
